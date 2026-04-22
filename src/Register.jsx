@@ -13,7 +13,7 @@ const Register = () => {
     try {
       await axios.post('https://localhost:7275/api/Auth/register', formData); 
       alert("Đăng ký thành công!"); navigate('/login');
-    } catch (error) {
+    } catch {
       alert("Đăng ký thất bại!");
     } finally { setLoading(false); }
   };

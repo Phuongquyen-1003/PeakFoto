@@ -21,7 +21,7 @@ const Login = ({ onLoginSuccess }) => {
         if (onLoginSuccess) onLoginSuccess();
         window.location.href = '/';
       }
-    } catch (error) {
+    } catch {
       setErrorMsg('Thông tin đăng nhập không chính xác!');
     }
   };
