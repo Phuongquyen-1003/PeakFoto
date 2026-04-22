@@ -13,7 +13,7 @@ const Login = ({ onLoginSuccess }) => {
     e.preventDefault();
     setErrorMsg('');
     try {
-      const response = await axios.post('https://localhost:7275/api/Auth/login', { email, password });
+      const response = await axios.post('https://localhost:7020/api/Auth/login', { email, password });
       if (response.data) {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('role', response.data.role || response.data.Role);

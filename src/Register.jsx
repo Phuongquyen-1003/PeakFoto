@@ -11,7 +11,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); setLoading(true);
     try {
-      await axios.post('https://localhost:7275/api/Auth/register', formData); 
+      await axios.post('https://localhost:7020/api/Auth/register', formData); 
       alert("Đăng ký thành công!"); navigate('/login');
     } catch {
       alert("Đăng ký thất bại!");
