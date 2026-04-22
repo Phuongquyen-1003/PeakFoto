@@ -58,7 +58,7 @@ const BookingList = () => {
       await axiosClient.put(`/Bookings/${jobId}/accept`);
       setData(prev => prev.filter(j => j.id !== jobId));
       alert("🎉 Đã nhận Job thành công!");
-    } catch (err) { alert("Lỗi khi nhận Job"); }
+    } catch{ alert("Lỗi khi nhận Job"); }
   };
 
   return (
