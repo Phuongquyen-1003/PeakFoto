@@ -64,7 +64,7 @@ const PhotographerDashboard = () => {
       await axiosClient.delete(`/Posts/${id}`);
       setMyPosts(prev => prev.filter(p => p.id !== id));
       setStats(prev => ({ ...prev, totalPosts: prev.totalPosts - 1 }));
-    } catch{
+    } catch (error) {
       alert("Không thể xóa bài viết. Vui lòng thử lại sau!");
     }
   };
